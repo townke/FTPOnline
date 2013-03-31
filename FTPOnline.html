@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FTPOnline</title>
+<style>
+.file{
+  background:#3C9;	
+}
+.dir{
+	background:#F90;
+}
+.aname{
+	background:#969;
+	
+}
+.atype{
+	background:#3FC;
+	
+}
+.amtime{
+	background:#C66;
+	
+}
+.asize{
+	background:#FC0;
+	
+}
+.del{
+	background:#FC0;
+	cursor:pointer;
+}
+.del:hover{
+	background:#0C3;
+}
+</style>
+<script>
+var dir="";
+var tempdir="";
+var lastaction="";
+function ftptest(path,action){
+	path=path||"";
+	action=action||"list";
+	lastaction=action;
+	tempdir=path;
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.onreadystatechange=httpchange;
+	xmlhttp.open("GET","http://www.townke.com/lib/ftp.class.php?action="+action+"&path="+path,true);
+	xmlhttp.send();
+}
+function httpchange(){
+	//alert(String(xmlhttp.readyState)+String(xmlhttp.responseText));
+	if(xmlhttp.readyState==4 && xmlhttp.status==200)
+	switch(lastaction)
+	{
+		case "list":setlist(xmlhttp.responseText);break;
+		case "new":refreshdir();//setlist(xmlhttp,responseText);break;
+		case "del":refreshdir();		
+	}
+	
+	
+}
+function setlist(listjson){
+	var list=eval(listjson);
+	dir=tempdir;
+	document.getElementById('dir').innerHTML=dir;
+	document.getElementById('list').innerHTML='';
+	for(var i=0;i<=list.length;i++)
+	  addoneline(list[i].name,list[i].type,list[i].mtime,list[i].size);
+}
+function adds(name){
+alert(name);	
+}
+function addoneline(name,type,mtime,size){
+	var node=document.getElementById('hidden').cloneNode(true);
+	//document.getElementById().setatt
+	node.removeAttribute('id');
+	node.setAttribute('class',type);
+	//node.setAttribute('name',name);
+	var innerTXT=node.innerHTML;
+	
+	innerTXT=innerTXT.replace(/#name/g,name);
+	if(type=='dir')
+		innerTXT=innerTXT.replace('#click','listclick(this)');
+	else
+		innerTXT=innerTXT.replace('#click','newwindow(this)');
+	innerTXT=innerTXT.replace('#type',type);
+	innerTXT=innerTXT.replace('#mtime',mtime);
+	innerTXT=innerTXT.replace('#size',size);
+	//alert(innerTXT);
+	node.innerHTML=innerTXT;
+	document.getElementById('list').appendChild(node);
+}
+function up(){
+	//alert('up');
+	var father=dir.substr(0,dir.lastIndexOf('/'));
+	//alert(father);
+	ftptest(father);
+}
+function refreshdir(){
+	ftptest(dir);	
+}
+function newwindow(obj){
+	if(dir!='')	
+	var netdir='http://townke.com/'+dir+'/'+obj.innerHTML;
+	else
+	var netdir='http://townke.com'+dir+'/'+obj.innerHTML;
+	//alert(netdir);
+	window.open(netdir);
+}
+function newfile(){
+	var filename=prompt("请输入文件名");
+	path=dir+'/'+filename;
+	ftptest(path,"new");
+}
+function listclick(obj){
+	if(dir!='')
+	ftptest(dir+'/'+obj.innerHTML);
+	else
+	ftptest(obj.innerHTML);
+	//stopDefault(e);
+}
+function deletefile(obj){
+	//alert(obj.getAttribute('name'));
+	if(confirm("确认删除文件 "+obj.getAttribute('name')+" ?"))
+	ftptest(dir+'/'+obj.getAttribute('name'),'del');
+}
+</script>
+</head>
+
+<body>
+
+<button onclick="ftptest()">连接</button>
+<button onclick="up()">向上</button>
+<button onclick="refreshdir()">刷新</button>
+<button onclick="newfile()">创建新文件</button>
+<div id='dir'></div>
+<table ><tr id='hidden' class=""><td class="name"><a href="javascript:void(0)" onclick="#click">#name</a></td><td onclick="deletefile(this)" name="#name" class="del">删除</td><td class="type">#type</td><td class="mtime">#mtime</td><td class="size">#size</td></tr></table>
+<table id='list'>
+
+</table>
+</body>
+</html>
