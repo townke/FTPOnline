@@ -2,7 +2,7 @@
 header("Content-Type: text/html;charset=utf-8");
 header("Access-Control-Allow-Origin: *");
 
-//it is test sign
+//it is test sign by blacklaw1
 //delpath('D:\usr\webroot\townke\wwwroot\filetest\ccd\aa');
 //$path='filetest/abc.txt';
 $ftp=new FTP();
