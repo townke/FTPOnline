@@ -10,8 +10,8 @@
 
 - - -
 ## Lack properties
-1. 将同步下来的` project.properties.bak ` 重命名为 ` project.properties` 
-2. 将`project.properties`中的`target`修改为和你ADT相对应的值  
+1. 将同步下来的 ***project.properties.bak*** 重命名为 ***project.properties***
+2. 将 ***project.properties*** 中的 ***target*** 修改为和你ADT相对应的值  
 
 # 
     #Project target  
@@ -19,7 +19,7 @@
 
 
 ## Bug report
-在根目录下有个`BUT_REPORT.txt`文件，你可以将BUG按照文档中的示范格式提示书写BUG报告
+在根目录下有个 ***BUT_REPORT.txt*** 文件，你可以将BUG按照文档中的示范格式提示书写BUG报告
 
     BUG             #3
     Description     在各页面均可使用菜单键弹出菜单setting（2.3测试发现，4.0+已取消），
