@@ -110,8 +110,8 @@ LastChange:	2013-05-22
 测试地址:	<http://kam1638.duapp.com/quyou/check_auth/?username=happy>  
 ***请求参数:***	
 >username 	string		需要进行授权检查的用户名  
-***返回参数:***  
 
+***返回参数:***  
 >success		boolean		是否授权成功  
 >msg			string		失败时相关的参考信息,成功时返回授权信息    
 >num         int		    相关的参考号    
@@ -130,6 +130,7 @@ LastChange:	2013-05-22
 测试地址:	<http://kam1638.duapp.com/quyou/recommand/?user_id=143>  
 ***请求参数:***	 
 >user_id 	当前用户的ID  
+
 ***返回参数:***	  
 >success		boolean		是否成功  
 >num 		int			参考标识  
@@ -182,9 +183,9 @@ LastChange:	2013-05-22
 >username	string		需要保存的用户名   
 >appid		string		app的标识   
 >channelid	int			channelid标识  
->userid		id			用户id???是目的用户ID吗？  
-***返回参数:***
+>userid		id			用户id???是目的用户ID吗？ 
 
+***返回参数:***
 >success		boolean		保存成功，失败是因为用户名不存在 
 
 <a id="usercenter_get"/> 
@@ -196,6 +197,7 @@ LastChange:	2013-05-22
 ***请求参数:***  
 >user_id		int		需要取数据的用户id  
 >action		string		动作，获取数据时为 get  
+
 ***返回参数:***  
 >success			boolean		是否设置成功   
 >msg				string		失败时参考消息    
@@ -226,7 +228,7 @@ LastChange:	2013-05-22
 
   
 <a id='advice'/>  
-####接口名：***advice***  
+####接口名： ***advice***  
 描述:		 意见反馈  
 调用方式:	POST  
 请求地址:	http://kam1638.duapp.com/quyou/advice  
@@ -244,7 +246,8 @@ LastChange:	2013-05-22
 
  
   
-<a id='userinfo'/>接口名：	***userinfo***  
+<a id='userinfo'/>
+####接口名：	***userinfo***  
 描述:		 获取用户个人信息(部分取自人人)  
 调用方式:	POST  
 请求地址:	http://kam1638.duapp.com/quyou/userinfo  
