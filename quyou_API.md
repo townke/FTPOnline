@@ -1,36 +1,37 @@
-Author:  	blacklaw
-Date:		2013-05-17
-Version:		0.1.2
-Email:		blackaw00@gmail.com
-LastChange:	2013-05-22
+Author:  	blacklaw 
+Date:		2013-05-17 
+Version:		0.1.2 
+Email:		blackaw00@gmail.com 
+LastChange:	2013-05-22 
 ---------------------------------------------
 
-接口列表
+####接口列表
 * 登录  			[login](#login) 
 * 注册  			[register](#register) 
-*获取上传图片sign  [uploadimage](#uploadimage) 
-4.检查用户名有效性  [checkusername](#checkusername) 
-5.人人授权  		  [renren_auth](#renren_auth) 
-6.检查授权状态  	[check_auth](#check_auth)
-7.系统推荐  		[recommand](#recommand)
-8.用户预览		[preview](#preview)
-9.获取会话id  		[chatbegin](#chatbegin)
-10.储存会话id  		[pushbind](#pushbind)
-11.个人中心get		[usercenter(get)](#usercenter_get)
-12.个人中心set		[usercenter(set)](#usercente_set)
-13.意见反馈		[advice](#advice)    [后台管理,密码帐号均为 advice]("http://kam1638.duapp.com/admin/quyou/advice/")
-14.个人信息		[userinfo](#userinfo)
+* 获取上传图片sign  [uploadimage](#uploadimage) 
+* 检查用户名有效性  [checkusername](#checkusername) 
+* 人人授权  		  [renren_auth](#renren_auth) 
+* 检查授权状态  	[check_auth](#check_auth)
+* 系统推荐  		[recommand](#recommand)
+* 用户预览		[preview](#preview)
+* 获取会话id  		[chatbegin](#chatbegin)
+* 储存会话id  		[pushbind](#pushbind)
+* 个人中心get		[usercenter(get)](#usercenter_get)
+* 个人中心set		[usercenter(set)](#usercente_set)
+* 意见反馈		[advice](#advice)    [后台管理,密码帐号均为 advice]("http://kam1638.duapp.com/admin/quyou/advice/")
+* 个人信息		[userinfo](#userinfo)
 
- 
-  <br>
+####注意事项
+1. 测试时可使用`get`方式投递，关闭测试请在`setting.py`中打开注释掉中间件 `GetToPostMiddleware`(默认打开)
 
-关闭测试请在setting中打开注释掉中间件 GetToPostMiddleware(默认打开)
+####接口参数
 
-  <a id='login'/>接口名：	<b class ='api_title'> login </b>
+
+接口名： ***login***
 描述:		登录时提供验证服务
 调用方式:	POST
 请求地址:	http://kam1638.duapp.com/quyou/login
-测试地址:	  ["http://kam1638.duapp.com/quyou/login/?username=happy&password=wsxedc"]http://kam1638.duapp.com/quyou/login/?username=happy&password=wsxedc</a>
+测试地址:	  ["http://kam1638.duapp.com/quyou/login/?username=happy&password=wsxedc"](http://kam1638.duapp.com/quyou/login/?username=happy&password=wsxedc)
 请求参数:	
 			username	string	登录时的用户名
 			password	string 	登录时的密码
