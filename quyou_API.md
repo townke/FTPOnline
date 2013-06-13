@@ -1,17 +1,17 @@
-/************************************
+
 Author:  	blacklaw
 Date:		2013-05-17
 Version:		0.1.2
 Email:		blackaw00@gmail.com
 LastChange:	2013-05-22
-*************************************/
+---------------------------------------------
 
 接口列表
-1.登录  			[login](#login)
-2.注册  			[register](#register)
-3.获取上传图片sign  [uploadimage](#uploadimage)
-4.检查用户名有效性  [checkusername](#checkusername)
-5.人人授权  		  [renren_auth](#renren_auth)
+1.登录  			[login](#login) 
+2.注册  			[register](#register) 
+3.获取上传图片sign  [uploadimage](#uploadimage) 
+4.检查用户名有效性  [checkusername](#checkusername) 
+5.人人授权  		  [renren_auth](#renren_auth) 
 6.检查授权状态  	[check_auth](#check_auth)
 7.系统推荐  		[recommand](#recommand)
 8.用户预览		[preview](#preview)
