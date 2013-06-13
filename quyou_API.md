@@ -1,4 +1,3 @@
-
 /************************************
 Author:  	blacklaw
 Date:		2013-05-17
@@ -6,6 +5,7 @@ Version:		0.1.2
 Email:		blackaw00@gmail.com
 LastChange:	2013-05-22
 *************************************/
+
 接口列表
 1.登录  			[login](#login)
 2.注册  			[register](#register)
