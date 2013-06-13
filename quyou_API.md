@@ -123,22 +123,22 @@ LastChange:	2013-05-22
 
 		
   <a id ="recommand"/>
-####接口名:	***recommand***
-描述:		为用户推荐好友
-请求方式:	POST
-请求地址:	http://kam1638.duapp.com/quyou/recommand
-测试地址:	<http://kam1638.duapp.com/quyou/recommand/?user_id=143>
-***请求参数:***	
->user_id 	当前用户的ID
-***返回参数:***	
->success		boolean		是否成功
->num 		int			参考标识
->msg	成功:json数组		失败 string 参考信息
->>name	string		推荐用户用户名
->>age		int			年龄
->>sex		int			性别，1男0女
->>pic		string(URL)	图片地址 
->>school	string		推荐用户学校名
+####接口名:	***recommand***  
+描述:		为用户推荐好友  
+请求方式:	POST  
+请求地址:	http://kam1638.duapp.com/quyou/recommand  
+测试地址:	<http://kam1638.duapp.com/quyou/recommand/?user_id=143>  
+***请求参数:***	 
+>user_id 	当前用户的ID  
+***返回参数:***	  
+>success		boolean		是否成功  
+>num 		int			参考标识  
+>msg	成功:json数组		失败 string 参考信息  
+>name	string		推荐用户用户名  
+>age		int			年龄  
+>sex		int			性别，1男0女  
+>pic		string(URL)	图片地址   
+>school	string		推荐用户学校名  
   
   
   <a id ="preview"/>
@@ -149,12 +149,12 @@ LastChange:	2013-05-22
 测试地址:	  <a href="http://kam1638.duapp.com/quyou/preview">http://kam1638.duapp.com/quyou/preview</a>  
 ***请求参数:***  
 >NULL  
-***返回参数:***  
 
+***返回参数:***  
 >success		boolean		是否成功  
 >num 		int			参考标识  
 >msg	成功:json数组		失败 string 参考信息  
->picURL string	图片地址
+>picURL string	图片地址  
   
   
   <a id ="chatbegin"/>
@@ -165,8 +165,8 @@ LastChange:	2013-05-22
 测试地址:	  <a href="http://kam1638.duapp.com/quyou/chatbegin/?to=happy">http://kam1638.duapp.com/quyou/chatbegin/?to=happy</a>
 ***请求参数:***	
 >to 		string		需要对话的目的用户名
-***返回参数:***
 
+***返回参数:***
 >success 	boolean 	是否获取成功
 >msg			string		失败时返回的参考数据
 >channelid	int			成功时返回的channelid
@@ -177,7 +177,7 @@ LastChange:	2013-05-22
 描述:		通信时，在Activity断开时依然可以重新建立链接  
 请求方式:	POST  
 请求地址:	http://kam1638.duapp.com/quyou/pushbind  
-测试地址:	 <http://kam1638.duapp.com/quyou/pushbind/?channelid=2143&userid=2341&appid=asff&username=happyh>
+测试地址:	 <http://kam1638.duapp.com/quyou/pushbind/?channelid=2143&userid=2341&appid=asff&username=happyh>   
 ***请求参数:***
 >username	string		需要保存的用户名   
 >appid		string		app的标识   
@@ -187,78 +187,78 @@ LastChange:	2013-05-22
 
 >success		boolean		保存成功，失败是因为用户名不存在 
 
-<a id="usercenter_get"/>
-####接口名:	***usercenter(get)***
-描述:		用户中心，action = get
-请求方式:	POST
-请求地址:	http://kam1638.duapp.com/quyou/usercenter
-测试地址:	  <a href="http://kam1638.duapp.com/quyou/usercenter/?action=get&user_id=166">http://kam1638.duapp.com/quyou/usercenter/?action=get&user_id=166</a>
+<a id="usercenter_get"/> 
+####接口名:	***usercenter(get)***  
+描述:		用户中心，action = get  
+请求方式:	POST  
+请求地址:	http://kam1638.duapp.com/quyou/usercenter  
+测试地址:	  <http://kam1638.duapp.com/quyou/usercenter/?action=get&user_id=166>  
 ***请求参数:***  
 >user_id		int		需要取数据的用户id  
 >action		string		动作，获取数据时为 get  
 ***返回参数:***  
->success			boolean		是否设置成功  
->msg				string		失败时参考消息  
->signature		string	个性签名  
->relationship	int		感情状态  
+>success			boolean		是否设置成功   
+>msg				string		失败时参考消息    
+>signature		string	个性签名    
+>relationship	int		感情状态    
 >declaration		string	恋爱宣言  
 >interests		string	个人兴趣   
 >character		string 	性格色彩  
 
   <a id="usercenter_set"/>
-####接口名:	***usercenter(set)***
-描述:		用户中心，action = get
-请求方式:	POST
-请求地址:	http://kam1638.duapp.com/quyou/usercenter
-测试地址:	<http://kam1638.duapp.com/quyou/usercenter/?action=set&user_id=166&interested=iiii&character=cccc&relationship=5&declaration=dddd&signature=ssss>
+####接口名:	***usercenter(set)***  
+描述:		用户中心，action = get  
+请求方式:	POST  
+请求地址:	http://kam1638.duapp.com/quyou/usercenter  
+测试地址:	<http://kam1638.duapp.com/quyou/usercenter/?action=set&user_id=166&interested=iiii&character=cccc&relationship=5&declaration=dddd&signature=ssss>  
 ***请求参数:***  
->user_id			int		需要保存的用户id
->action			string		动作，设置数据时为 set
->signature		string		个性签名(非必须)
->relationship	int			感情状态(非必须)
->declaration		string		恋爱宣言(非必须)
->interests		string		个人兴趣(非必须)
->character		string 		性格色彩(非必须)
+>user_id			int		需要保存的用户id  
+>action			string		动作，设置数据时为 set  
+>signature		string		个性签名(非必须)  
+>relationship	int			感情状态(非必须)  
+>declaration		string		恋爱宣言(非必须)  
+>interests		string		个人兴趣(非必须)  
+>character		string 		性格色彩(非必须)  
 
-***返回参数:***  
->success			boolean		是否设置成功
->msg				string		失败时参考消息
+***返回参数:***   
+>success			boolean		是否设置成功  
+>msg				string		失败时参考消息  
 
   
-<a id='advice'/>
-####接口名：***advice***
-描述:		 意见反馈
-调用方式:	POST
-请求地址:	http://kam1638.duapp.com/quyou/advice
-测试地址:	<http://kam1638.duapp.com/quyou/advice/?subject=功能&content=希望能够更加完善&email=blacklaw00@gmail.com>
-***请求参数:***    
->user_id     int      用户id(非必须)  
->subject     string   主题  
->content     string   反馈正文   
+<a id='advice'/>  
+####接口名：***advice***  
+描述:		 意见反馈  
+调用方式:	POST  
+请求地址:	http://kam1638.duapp.com/quyou/advice  
+测试地址:	<http://kam1638.duapp.com/quyou/advice/?subject=功能&content=希望能够更加完善&email=blacklaw00@gmail.com>   
+***请求参数:***      
+>user_id     int      用户id(非必须)    
+>subject     string   主题    
+>content     string   反馈正文    
 >email       string   邮箱(请检查邮箱格式，否则失败)  
 
 ***返回参数:***  
 >success 	boolean	是否提交成功  
->msg			string	相关的参考信息  
+>msg			string	相关的参考信息    
   
 
  
   
-<a id='userinfo'/>接口名：	***userinfo***
-描述:		 获取用户个人信息(部分取自人人)
-调用方式:	POST
-请求地址:	http://kam1638.duapp.com/quyou/userinfo
-测试地址:	<http://kam1638.duapp.com/quyou/userinfo/?user_id=166>
-***请求参数:***  
+<a id='userinfo'/>接口名：	***userinfo***  
+描述:		 获取用户个人信息(部分取自人人)  
+调用方式:	POST  
+请求地址:	http://kam1638.duapp.com/quyou/userinfo  
+测试地址:	<http://kam1638.duapp.com/quyou/userinfo/?user_id=166>  
+***请求参数:***    
 >user_id     id     用户id
-***返回参数:***  
 
->success 	boolean	是否成功
->msg			string	相关的参考信息
->name 		string  姓名
->sex			int		性别 1男0女
->university	string  学校
->birthday    string  生日
+***返回参数:***  
+>success 	boolean	是否成功  
+>msg			string	相关的参考信息  
+>name 		string  姓名  
+>sex			int		性别 1男0女  
+>university	string  学校  
+>birthday    string  生日  
   
   
   </body>
