@@ -2,7 +2,7 @@ Author:  	blacklaw
 Date:		2013-05-17  
 Version:		0.1.2  
 Email:		blackaw00@gmail.com   
-LastChange:	2013-05-22 
+LastChange:	2013-06-13 
 
 ---------------------------------------------
 
@@ -160,18 +160,18 @@ LastChange:	2013-05-22
   
   <a id ="chatbegin"/>
 ####接口名:	***chatbegin***
-描述:		对话开始时,需要向服务器请求一些基本数据
-请求方式: 	POST
-请求地址:	http://kam1638.duapp.com/quyou/chatbegin
-测试地址:	  <a href="http://kam1638.duapp.com/quyou/chatbegin/?to=happy">http://kam1638.duapp.com/quyou/chatbegin/?to=happy</a>
-***请求参数:***	
->to 		string		需要对话的目的用户名
-
-***返回参数:***
->success 	boolean 	是否获取成功
->msg			string		失败时返回的参考数据
->channelid	int			成功时返回的channelid
->userid		int			成功时返回的用户id
+描述:		对话开始时,需要向服务器请求一些基本数据  
+请求方式: 	POST  
+请求地址:	http://kam1638.duapp.com/quyou/chatbegin  
+测试地址:	  <http://kam1638.duapp.com/quyou/chatbegin/?to=happy>  
+***请求参数:***	  
+>to 		string		需要对话的目的用户名  
+ 
+***返回参数:***  
+>success 	boolean 	是否获取成功  
+>msg			string		失败时返回的参考数据    
+>channelid	int			成功时返回的channelid  
+>userid		int			成功时返回的用户id  
 
   <a id="pushbind"/>
 ####接口名:	<b class ='api_title'> pushbind </b>
